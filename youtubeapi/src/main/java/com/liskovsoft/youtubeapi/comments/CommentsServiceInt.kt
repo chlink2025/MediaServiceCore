@@ -43,6 +43,14 @@ internal object CommentsServiceInt {
         RetrofitHelper.getWithErrors(mApi.commentActionWithAnswer(CommentsApiParams.getDeleteCommentQuery(videoId, commentId))),
         commentId)
 
+    // NEWTUBE(comment-translate): translation is read-only and works signed out, so no
+    // checkSignedIn; throws with YouTube's reason (or "No translated text") when there is no text.
+
+    fun translateComment(commentText: String, targetLanguage: String): String =
+        CommentTranslateAnswers.translatedText(RetrofitHelper.getWithErrors(
+            mApi.commentActionWithAnswer(CommentsApiParams.getTranslateCommentQuery(commentText, targetLanguage))))
+            ?: throw IllegalStateException("No translated text")
+
     private fun getCommentsResult(commentsKey: String) = RetrofitHelper.get(mApi.getComments(CommentsApiParams.getCommentsQuery(commentsKey)))
 
     private fun getActionResult(actionKey: String) = RetrofitHelper.get(mApi.commentAction(CommentsApiParams.getActionQuery(actionKey)))

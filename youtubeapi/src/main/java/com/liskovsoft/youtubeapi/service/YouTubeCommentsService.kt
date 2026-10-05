@@ -54,6 +54,12 @@ internal object YouTubeCommentsService: CommentsService {
         }
     }
 
+    override fun translateCommentObserve(commentText: String?, targetLanguage: String?): Observable<String> {
+        return RxHelper.fromCallable {
+            CommentsServiceInt.translateComment(requireNotNull(commentText), requireNotNull(targetLanguage))
+        }
+    }
+
     /**
      * NEWTUBE(write-comments): a write never leaves without the account's header. Right after a
      * cold start the header may not be restored yet, and YouTube answers an anonymous write with

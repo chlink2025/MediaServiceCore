@@ -17,4 +17,7 @@ public interface CommentsService {
 
     /** NEWTUBE(write-comments): deletes one of the signed-in account's comments or replies. */
     Observable<Void> deleteCommentObserve(String videoId, String commentId);
+
+    /** NEWTUBE(comment-translate): translates one comment's text; emits the translated text. */
+    Observable<String> translateCommentObserve(String commentText, String targetLanguage);
 }

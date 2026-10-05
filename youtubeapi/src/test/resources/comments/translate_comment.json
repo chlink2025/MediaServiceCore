@@ -1,0 +1,18 @@
+{
+  "frameworkUpdates": {
+    "entityBatchUpdate": {
+      "mutations": [
+        {
+          "payload": {
+            "commentEntityPayload": {
+              "key": "UgwbBtiUuiLoDx-QlId4AaABAg",
+              "translatedContent": {
+                "content": "Bonjour, ceci est un test"
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}

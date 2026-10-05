@@ -50,6 +50,39 @@ internal object CommentsApiParams {
     fun deleteCommentParams(videoId: String, commentId: String): String =
         encode(Proto().varint(1, 6).varint(2, 2).string(3, commentId).string(5, videoId))
 
+    // NEWTUBE(comment-translate): perform_comment_action type 22, the action YouTube's own comment
+    // "Translate" button sends. Layout from the reference client (YouTube.js v18.1.0
+    // PeformCommentActionParams): without a comment id it sends blank ids plus unk_num=2, which is
+    // the one verified to work, so the app's translate call uses exactly that. The ids stay optional
+    // (passing one drops unk_num) for capture comparison and future retries. Emojis are stripped
+    // because InnerTube refuses the text otherwise.
+
+    fun getTranslateCommentQuery(commentText: String, targetLanguage: String): String =
+        getActionQuery(translateCommentParams(commentText, targetLanguage))
+
+    /** {1: 22, 2: 2, 3: " ", 5: " ", 23: " ", 31: {2: " ", 3: {1: {1: text}}, 4: targetLanguage}} */
+    fun translateCommentParams(commentText: String, targetLanguage: String,
+                               videoId: String? = null, commentId: String? = null): String {
+        val action = Proto().varint(1, 22)
+        if (commentId != null) {
+            action.string(3, commentId) // a real comment id replaces YouTube.js's unk_num marker
+        } else {
+            action.varint(2, 2)
+            action.string(3, " ")
+        }
+        action.string(5, videoId ?: " ")
+        action.string(23, " ")
+        action.message(31, Proto()
+            .string(2, commentId ?: " ")
+            .message(3, Proto().message(1, Proto().string(1, stripEmojis(commentText))))
+            .string(4, targetLanguage))
+        return encode(action)
+    }
+
+    /** Letters, numbers, punctuation and separators only - the same filter YouTube.js applies. */
+    private fun stripEmojis(text: String): String =
+        text.replace(Regex("[^\\p{L}\\p{N}\\p{P}\\p{Z}]"), "")
+
     /** Standard base64 with padding, URL-encoded, as YouTube's own clients send these params. */
     private fun encode(proto: Proto): String = URLEncoder.encode(proto.bytes.readByteString().base64(), "UTF-8")
 
