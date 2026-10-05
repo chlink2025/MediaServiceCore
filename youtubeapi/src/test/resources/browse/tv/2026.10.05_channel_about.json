@@ -1,0 +1,719 @@
+{
+ "onResponseReceivedEndpoints": [
+  {
+   "clickTrackingParams": "CAAQhGciEwjgy5WLoaKXAxXWSEwIHVyiLDrKAQS1g1dj",
+   "appendContinuationItemsAction": {
+    "continuationItems": [
+     {
+      "aboutChannelRenderer": {
+       "metadata": {
+        "aboutChannelViewModel": {
+         "description": "Captain Jack is an unique mix between party music and millitary-dance-sound that brings everyone on the dancefloor. He's one of the most wellknown 90's eurodance acts worldwide - created 1995 by the german music producer Udo Niebergall. The uniform and the red hat are the trademarks of Captain Jack.\n",
+         "descriptionLabel": {
+          "content": "Description",
+          "styleRuns": [
+           {
+            "startIndex": 0,
+            "length": 11
+           }
+          ]
+         },
+         "artistBio": {
+          "content": "Captain Jack is an American-German Eurodance and dance-rock project formed in Darmstadt in 1995. The project is best known for its single \"Captain Jack\", which reached the top 10 in many countries in Europe."
+         },
+         "artistBioLabel": {
+          "content": "Biography",
+          "styleRuns": [
+           {
+            "startIndex": 0,
+            "length": 9
+           }
+          ]
+         },
+         "country": "Germany",
+         "customLinksLabel": {
+          "content": "Links",
+          "styleRuns": [
+           {
+            "startIndex": 0,
+            "length": 5
+           }
+          ]
+         },
+         "subscriberCountText": "150K subscribers",
+         "viewCountText": "115,663,358 views",
+         "joinedDateText": {
+          "content": "Joined Mar 24, 2010",
+          "styleRuns": [
+           {
+            "startIndex": 0,
+            "length": 19
+           }
+          ]
+         },
+         "canonicalChannelUrl": "http://www.youtube.com/@captainjackofficial",
+         "channelId": "UCa8RiU2st_48AA4WscbwYVQ",
+         "additionalInfoLabel": {
+          "content": "More info",
+          "styleRuns": [
+           {
+            "startIndex": 0,
+            "length": 9
+           }
+          ]
+         },
+         "customUrlOnTap": {
+          "innertubeCommand": {
+           "clickTrackingParams": "CAYQo4sSIhMI4MuVi6GilwMV1khMCB1coiw6ygEEtYNXYw==",
+           "commandMetadata": {
+            "webCommandMetadata": {
+             "ignoreNavigation": true
+            }
+           },
+           "shareEntityEndpoint": {
+            "serializedShareEntity": "GhhVQ2E4UmlVMnN0XzQ4QUE0V3NjYndZVlE%3D",
+            "sharePanelType": "SHARE_PANEL_TYPE_UNIFIED_SHARE_PANEL"
+           }
+          }
+         },
+         "videoCountText": "58 videos",
+         "signInForBusinessEmail": {
+          "content": "Sign in to see email address",
+          "commandRuns": [
+           {
+            "startIndex": 0,
+            "length": 7,
+            "onTap": {
+             "innertubeCommand": {
+              "clickTrackingParams": "CAYQo4sSIhMI4MuVi6GilwMV1khMCB1coiw6ygEEtYNXYw==",
+              "commandMetadata": {
+               "webCommandMetadata": {
+                "url": "https://accounts.google.com/ServiceLogin?service=youtube&uilel=3&passive=true&continue=https%3A%2F%2Fwww.youtube.com%2Fsignin%3Faction_handle_signin%3Dtrue%26app%3Ddesktop%26hl%3Den%26next%3D%252F%2540captainjackofficial&hl=en",
+                "webPageType": "WEB_PAGE_TYPE_UNKNOWN",
+                "rootVe": 83769
+               }
+              },
+              "signInEndpoint": {
+               "nextEndpoint": {
+                "clickTrackingParams": "CAYQo4sSIhMI4MuVi6GilwMV1khMCB1coiw6ygEEtYNXYw==",
+                "commandMetadata": {
+                 "webCommandMetadata": {
+                  "url": "/@captainjackofficial",
+                  "webPageType": "WEB_PAGE_TYPE_CHANNEL",
+                  "rootVe": 3611,
+                  "apiUrl": "/youtubei/v1/browse"
+                 }
+                },
+                "browseEndpoint": {
+                 "browseId": "UCa8RiU2st_48AA4WscbwYVQ",
+                 "params": "8gYECgIyAA%3D%3D",
+                 "canonicalBaseUrl": "/@captainjackofficial"
+                }
+               }
+              }
+             }
+            }
+           }
+          ],
+          "styleRuns": [
+           {
+            "startIndex": 0,
+            "length": 28
+           }
+          ]
+         },
+         "links": [
+          {
+           "channelExternalLinkViewModel": {
+            "title": {
+             "content": "Spotify"
+            },
+            "link": {
+             "content": "open.spotify.com/artist/1b81zU0IfjHE8krv2IZ0Hf",
+             "commandRuns": [
+              {
+               "startIndex": 0,
+               "length": 46,
+               "onTap": {
+                "innertubeCommand": {
+                 "clickTrackingParams": "CAsQobIHGAAiEwjgy5WLoaKXAxXWSEwIHVyiLDrKAQS1g1dj",
+                 "commandMetadata": {
+                  "webCommandMetadata": {
+                   "url": "https://www.youtube.com/redirect?event=channel_description&redir_token=QUZZTVljSG1aX0U5SjJmMHc4djNiVmMzTjFudnxBTl9pYzRjSEdiNFRMRVRycG5xYWIwb2x4bEgtU1hrNks4ejNVNW9BZkM1ZnM0MDZJVkdMREZ6MTJCWWVwOGFTb0hrN3lwRER2V05TYVVTcU5FUWFZSERwVmllT0pRR0hvaFNP&q=https%3A%2F%2Fopen.spotify.com%2Fartist%2F1b81zU0IfjHE8krv2IZ0Hf",
+                   "webPageType": "WEB_PAGE_TYPE_UNKNOWN",
+                   "rootVe": 83769
+                  }
+                 },
+                 "urlEndpoint": {
+                  "url": "https://www.youtube.com/redirect?event=channel_description&redir_token=QUZZTVljSG1aX0U5SjJmMHc4djNiVmMzTjFudnxBTl9pYzRjSEdiNFRMRVRycG5xYWIwb2x4bEgtU1hrNks4ejNVNW9BZkM1ZnM0MDZJVkdMREZ6MTJCWWVwOGFTb0hrN3lwRER2V05TYVVTcU5FUWFZSERwVmllT0pRR0hvaFNP&q=https%3A%2F%2Fopen.spotify.com%2Fartist%2F1b81zU0IfjHE8krv2IZ0Hf",
+                  "target": "TARGET_NEW_WINDOW",
+                  "nofollow": true
+                 }
+                }
+               }
+              }
+             ]
+            },
+            "favicon": {
+             "sources": [
+              {
+               "url": "https://encrypted-tbn2.gstatic.com/favicon-tbn?q=tbn:ANd9GcRkg5ej2Nhm5HWkVYYIxIzysv9gFuaHvk-ZXTcX12abSusd4VWmcTdPsGpAOcCFyn-YaSO3YtSHyKqkErVBdRnFbQV9l3gFcW9ahAM66P6xoZXi9A_U",
+               "width": 16,
+               "height": 16
+              },
+              {
+               "url": "https://encrypted-tbn2.gstatic.com/favicon-tbn?q=tbn:ANd9GcRpYoft_kBYnQlIkTjnC2wZwxlOkNQgrS14jLCHh4coGKJA3-n8dX1Lk7Q1JmweBJDzNbnHPZjrtFx3WHnNor-_fQfNof2pksC4FQg3qcDDnScJt1YY",
+               "width": 24,
+               "height": 24
+              },
+              {
+               "url": "https://encrypted-tbn2.gstatic.com/favicon-tbn?q=tbn:ANd9GcSvz8TwKP7XSdNZtJ9uWov0Es8EYmP7dE_UC5ux5k162_Kwq5GADrCaZblOi39zNvw47s4-3ttgQJDBok1oj40Zw7055KEpzA5E0ziJYGIecdbKNifP",
+               "width": 32,
+               "height": 32
+              },
+              {
+               "url": "https://encrypted-tbn2.gstatic.com/favicon-tbn?q=tbn:ANd9GcQHygtrmhPtdFHoQ_Ycck3OuSFzfbSoZ8nGcD0bXA0IxLXVFX5qf64oxsDYZBmLPj7T2mfvIHe5_9FLdKSUxO_szsWg75_0LsBNMmP8WFaCKO83KDY2",
+               "width": 48,
+               "height": 48
+              },
+              {
+               "url": "https://encrypted-tbn2.gstatic.com/favicon-tbn?q=tbn:ANd9GcTsR8y4q0MP6cnvPy2V51hsrtqMxGMAWeq5H-yQ3SYYLNCCwrXBJMcks39x3d2J8e1DxzWOB39guIVnwEByzrilImuGfSStyaCAWXtu7Mq6QiBrc1sx",
+               "width": 50,
+               "height": 50
+              },
+              {
+               "url": "https://encrypted-tbn2.gstatic.com/favicon-tbn?q=tbn:ANd9GcQXNUEtfF7qqoidLT4Huqgy3-MUu9oe-Fg4iIFAiEdOP-do7k9Pfv60gAvvc95Zcc30O6cBgdOQo4Y_NGiII20t3Nb9_qtNnqsd2sPh_t7-lM-B_mXq",
+               "width": 64,
+               "height": 64
+              },
+              {
+               "url": "https://encrypted-tbn2.gstatic.com/favicon-tbn?q=tbn:ANd9GcQ-7ceGjJJ4Hm39e4TcMOuti0bXzbD5Y5KwyZswC1ctbTjcX5EcRBEAMORenLwrXXnsfIQhEkvUbiOaMFQ9YKvpszk7lHY5yb7-QjS49Pkr49ocGz26",
+               "width": 96,
+               "height": 96
+              },
+              {
+               "url": "https://encrypted-tbn2.gstatic.com/favicon-tbn?q=tbn:ANd9GcRV2Vc-eBqkPp3gBMhKm_El7dq5FwzRDLfLyFrkrxmO6M35bzNEO0m0V0oPeLfvB1gSwseE6XBkr2qooo6g95CX-vV4wmq2Z7lJcOCCnSKCxXCeWcRPPw",
+               "width": 128,
+               "height": 128
+              },
+              {
+               "url": "https://encrypted-tbn2.gstatic.com/favicon-tbn?q=tbn:ANd9GcSkI6tTQ1SxBqkcx6ip9H2XFscOuw9bfVOF-Y_tBjS0YO7I8R_5O34SnqY9e0Usr8Mx3I9i82Pzvs3Ex1jmG7Wr2tq5z3VJDiwTYpgA-0DICWuKzvQTmw",
+               "width": 180,
+               "height": 180
+              },
+              {
+               "url": "https://encrypted-tbn2.gstatic.com/favicon-tbn?q=tbn:ANd9GcTy7pKZHWwdZTQI8ppIdfJl3oTzNyHxpcLbgiFyw2kA-Gl7QmCersvUjqHZG4Zt17PgaqGtNjuipfA-BAq2P7PHBRfxsLaCC1t9soXjCKc4ICqI-amI6Q",
+               "width": 256,
+               "height": 256
+              }
+             ]
+            }
+           }
+          },
+          {
+           "channelExternalLinkViewModel": {
+            "title": {
+             "content": "TikTok"
+            },
+            "link": {
+             "content": "tiktok.com/@captainjackofficial",
+             "commandRuns": [
+              {
+               "startIndex": 0,
+               "length": 31,
+               "onTap": {
+                "innertubeCommand": {
+                 "clickTrackingParams": "CAoQobIHGAEiEwjgy5WLoaKXAxXWSEwIHVyiLDrKAQS1g1dj",
+                 "commandMetadata": {
+                  "webCommandMetadata": {
+                   "url": "https://www.youtube.com/redirect?event=channel_description&redir_token=QUZZTVljRW02Wm5mYlotMzZGdTF2TmZoY3N4T3xBTl9pYzRldTJsQmhTSjI2SjRrR3RRVGQ1WFBfM2ZSLS1mSjFJcFdGTll6ZkRmRTIxREYzMjJ2LTVMYmxiRm9YLXppX21ucHlkc3puRnQyX3dfcjI2cTZLUU51b0tiSkcxdkht&q=https%3A%2F%2Fwww.tiktok.com%2F%40captainjackofficial",
+                   "webPageType": "WEB_PAGE_TYPE_UNKNOWN",
+                   "rootVe": 83769
+                  }
+                 },
+                 "urlEndpoint": {
+                  "url": "https://www.youtube.com/redirect?event=channel_description&redir_token=QUZZTVljRW02Wm5mYlotMzZGdTF2TmZoY3N4T3xBTl9pYzRldTJsQmhTSjI2SjRrR3RRVGQ1WFBfM2ZSLS1mSjFJcFdGTll6ZkRmRTIxREYzMjJ2LTVMYmxiRm9YLXppX21ucHlkc3puRnQyX3dfcjI2cTZLUU51b0tiSkcxdkht&q=https%3A%2F%2Fwww.tiktok.com%2F%40captainjackofficial",
+                  "target": "TARGET_NEW_WINDOW",
+                  "nofollow": true
+                 }
+                }
+               }
+              }
+             ]
+            },
+            "favicon": {
+             "sources": [
+              {
+               "url": "https://encrypted-tbn3.gstatic.com/favicon-tbn?q=tbn:ANd9GcTil9qRPKod7VzAZX5hcljGOgNm_7OH9ctUPIWDk6tsvCGucVCNpU42I4k2ABNB9C3Dcv2DTXTaPLHtE7s4M5O0dzX4RrA-amgItDD5R5YT_fInOg",
+               "width": 16,
+               "height": 16
+              },
+              {
+               "url": "https://encrypted-tbn3.gstatic.com/favicon-tbn?q=tbn:ANd9GcTQNWsQwtp_kYkNwgZnqc6n3XkmETbBWnjEs5aqLKdxeX3Wzcm-Wx5HgUOr428dO1AiXFFOmntTerjwyz490qT8gCGo1vfOjv6f-7fMX15zaDKa6w",
+               "width": 24,
+               "height": 24
+              },
+              {
+               "url": "https://encrypted-tbn3.gstatic.com/favicon-tbn?q=tbn:ANd9GcQygKR9Wk54Cc_JsO1lyQb_1WH1e7-2vnoNPKwyIfUp5ytWAZgsPmk0id-xzupFpGlSOE8B0Cq9W6o0kP8adjPc1IHTMJDkjQRDyTUOL6wXevQhZw",
+               "width": 32,
+               "height": 32
+              },
+              {
+               "url": "https://encrypted-tbn3.gstatic.com/favicon-tbn?q=tbn:ANd9GcTcBLjXcdPdrvf7vm3krYSrE5nTsulUW2d7SiAXUyOmJ3k7LmJ3ismlN7eU4GinNoUQc6_0xtDkc8rWHFdDmQzlI6UOKmQQscwltJ46aBUE8zThNA",
+               "width": 48,
+               "height": 48
+              },
+              {
+               "url": "https://encrypted-tbn3.gstatic.com/favicon-tbn?q=tbn:ANd9GcQ7IkkbqNzuB9NlTdwO-p-79wzObhQSbTuUEeJRXQdmtLBMvVSSGm7J8LkWM-o4Lc2KZQkSdLGYh2ph6dt4moIfG1JHagaf9zC6cnYNfWNjwYlA9Q",
+               "width": 50,
+               "height": 50
+              },
+              {
+               "url": "https://encrypted-tbn3.gstatic.com/favicon-tbn?q=tbn:ANd9GcT5aYj7VdDmDIFMFxhRzxy_S7SguI8_rqskdTqoNV4aJs32DCET_r4aHvy8xn0jDKDWoalwDy-_1-4EIKlF2QdvYqWyDfNTfC0nyF02ZhLIVM1vVQ",
+               "width": 64,
+               "height": 64
+              },
+              {
+               "url": "https://encrypted-tbn3.gstatic.com/favicon-tbn?q=tbn:ANd9GcRNkuFU4yCOx1Zaar69IdZTstTaCnjOdU-6ozZbE4f2KXhUHw_2Da3pYL-AjA-LQFc2YySy9JRsaNX4zRrdokB5PCjGP8gN2UZ7fvXKJ5lftAk4_Q",
+               "width": 96,
+               "height": 96
+              },
+              {
+               "url": "https://encrypted-tbn3.gstatic.com/favicon-tbn?q=tbn:ANd9GcTt71izcVOsKD84C9xklBGMvmECZg2l8-w5IrCaEhDsh3Gr6FkoIZ9BSrQytiBSp2AkG6o3g1SwbvJTm6yS-kYIe0Xzq46A9GwEtxzQGuSoroWP1Ww",
+               "width": 128,
+               "height": 128
+              },
+              {
+               "url": "https://encrypted-tbn3.gstatic.com/favicon-tbn?q=tbn:ANd9GcSaokoUIYqEIfVkup_xoaUivZBehTWcxZmSu4NTnDcAKMtJon8NwCrfWn54BQ9wINCfq8y4mXG0irVCgaReSsiYhjssAop7IZVUetWi4ZzFfQN5yko",
+               "width": 180,
+               "height": 180
+              },
+              {
+               "url": "https://encrypted-tbn3.gstatic.com/favicon-tbn?q=tbn:ANd9GcQKztzAFLM-Ht00NtZR3C_LPpwiMBXyfSbY3CevC9KOxibegrIjaqfvZtuasvcIjnxH9SHSWIC-D-hYkAagy33P_6rpJFiNR2iYp0UR5p99Y-NJcJ4",
+               "width": 256,
+               "height": 256
+              }
+             ]
+            }
+           }
+          },
+          {
+           "channelExternalLinkViewModel": {
+            "title": {
+             "content": "Facebook"
+            },
+            "link": {
+             "content": "facebook.com/CaptainJackOfficial",
+             "commandRuns": [
+              {
+               "startIndex": 0,
+               "length": 32,
+               "onTap": {
+                "innertubeCommand": {
+                 "clickTrackingParams": "CAkQobIHGAIiEwjgy5WLoaKXAxXWSEwIHVyiLDrKAQS1g1dj",
+                 "commandMetadata": {
+                  "webCommandMetadata": {
+                   "url": "https://www.youtube.com/redirect?event=channel_description&redir_token=QUZZTVljRWlJQnk0dXMxY2NzdDFXNFdxZTN0b3xBTl9pYzRkWnl5bUdTVlN0aUhTZzVnMGFTalhuTzVWR0xOVFNDUWNXdHB4S2ZTMnRvVkk4RGNxS1djdE1OMEtqU01jY3RSY29LX096YVVkRHNrN0RSMGVxXzFUblV4Skc1TkVS&q=https%3A%2F%2Fwww.facebook.com%2FCaptainJackOfficial",
+                   "webPageType": "WEB_PAGE_TYPE_UNKNOWN",
+                   "rootVe": 83769
+                  }
+                 },
+                 "urlEndpoint": {
+                  "url": "https://www.youtube.com/redirect?event=channel_description&redir_token=QUZZTVljRWlJQnk0dXMxY2NzdDFXNFdxZTN0b3xBTl9pYzRkWnl5bUdTVlN0aUhTZzVnMGFTalhuTzVWR0xOVFNDUWNXdHB4S2ZTMnRvVkk4RGNxS1djdE1OMEtqU01jY3RSY29LX096YVVkRHNrN0RSMGVxXzFUblV4Skc1TkVS&q=https%3A%2F%2Fwww.facebook.com%2FCaptainJackOfficial",
+                  "target": "TARGET_NEW_WINDOW",
+                  "nofollow": true
+                 }
+                }
+               }
+              }
+             ]
+            },
+            "favicon": {
+             "sources": [
+              {
+               "url": "https://encrypted-tbn3.gstatic.com/favicon-tbn?q=tbn:ANd9GcSxUwGjsJZApoUKonOfNzxpFkEMyf29jwvspkLH1CA-JP5Nx06tcApyuGcjdsPZWzHuoyTRot1jS2gOtE_pzWKSSaJg0t0MtrRw6u7ZcItl78fGxuhb",
+               "width": 16,
+               "height": 16
+              },
+              {
+               "url": "https://encrypted-tbn3.gstatic.com/favicon-tbn?q=tbn:ANd9GcR0ylMkfr9JPEbAzxpv2k9ZFFIl6h9VP1z48xx-Ah-dPUOsxyBR21grouv_OcB3VGHkkOytB0Z9mmY9ehoP94MLky8vRLJhX5WxlpzbIBa9u3XpmRaO",
+               "width": 24,
+               "height": 24
+              },
+              {
+               "url": "https://encrypted-tbn3.gstatic.com/favicon-tbn?q=tbn:ANd9GcQtPxG-b3azLNNqSmjBWUiAkJC0CO9VYuddIiaMt1yuNkxz7qTiozdFGe9QfHcbgSQoAVd62MlrWMERaer0YKP2mlYFHVGSN86iSpYsShhmp5KnLmeV",
+               "width": 32,
+               "height": 32
+              },
+              {
+               "url": "https://encrypted-tbn3.gstatic.com/favicon-tbn?q=tbn:ANd9GcS10Cr8iHSK1a0qx8-9odz5522h9CMmhhf_EwgJepaHBw3ehlRUpDGVFOyxKaxzr7O5nXrl29oSSE5MpEF4y9qMju_rxPsVeZ-jW_6SOODk_3SPfJoH",
+               "width": 48,
+               "height": 48
+              },
+              {
+               "url": "https://encrypted-tbn3.gstatic.com/favicon-tbn?q=tbn:ANd9GcSrMdlGRGCdU2rgzX6rxf2RTGh9nNFKVl1hRLhTEwz94EnOUxKGBLlMKLNoj_k5uYluxdkuDBGK8vaYMkBl1wOTsIyW8-0-Yg9NUuzrS67aedf9ycdG",
+               "width": 50,
+               "height": 50
+              },
+              {
+               "url": "https://encrypted-tbn3.gstatic.com/favicon-tbn?q=tbn:ANd9GcRyh91gHMPzLIJi1-OTM4k66SQZFiX4VcUrtdQtXBqCBFnhH2FE2Acb5eakTbyinsiAEeP6LiZ8PUzBWEX7xgFd-zKcy33BfZ95m6eUZYQY181-CeQE",
+               "width": 64,
+               "height": 64
+              },
+              {
+               "url": "https://encrypted-tbn3.gstatic.com/favicon-tbn?q=tbn:ANd9GcTYPZHPqlUdxtnTDIpO-KQyW3jnru1Yuhy567gZkqwmSkzHyvGpHPT5eTihY-DJ2sBtFDJCCiHIRuwRU4WgqAjLuSQyB48TKNt5pTi1kYmCovZibwll",
+               "width": 96,
+               "height": 96
+              },
+              {
+               "url": "https://encrypted-tbn3.gstatic.com/favicon-tbn?q=tbn:ANd9GcRgZvjE7rtHwqLbIvHeVKV9QUlqUibPaTvjstwjGu_-qsTHiK_44DBO2sp1V6JahsUdtXTlFYEJCH6jRzqEPWfozTGtATJ6qPLRmb12LilM6Au2UpygCw",
+               "width": 128,
+               "height": 128
+              },
+              {
+               "url": "https://encrypted-tbn3.gstatic.com/favicon-tbn?q=tbn:ANd9GcQ2Dxw7PJtky1ucXkCDE35DwEOEvblstFhbVks-obptBonzCyKT4QJoQp7pVuq7FrpghWg6nAkVcTZpcsVHsoPYySoOe7oS0f9sFmJqgZENJMIBbae5Yg",
+               "width": 180,
+               "height": 180
+              },
+              {
+               "url": "https://encrypted-tbn3.gstatic.com/favicon-tbn?q=tbn:ANd9GcQj6tFbIEZH6KkBEISjsbAGeqJk0h4_TtuseJEKTDKFj7cLXn9N9V5qe-N5r9QRJS0QYLqPUe6U800spJjOLJCjn8qQE-tbQGPjTE2PNKmCkI_gtwN2Aw",
+               "width": 256,
+               "height": 256
+              }
+             ]
+            }
+           }
+          },
+          {
+           "channelExternalLinkViewModel": {
+            "title": {
+             "content": "Instagram"
+            },
+            "link": {
+             "content": "instagram.com/captainjack.heyo",
+             "commandRuns": [
+              {
+               "startIndex": 0,
+               "length": 30,
+               "onTap": {
+                "innertubeCommand": {
+                 "clickTrackingParams": "CAgQobIHGAMiEwjgy5WLoaKXAxXWSEwIHVyiLDrKAQS1g1dj",
+                 "commandMetadata": {
+                  "webCommandMetadata": {
+                   "url": "https://www.youtube.com/redirect?event=channel_description&redir_token=QUZZTVljRWllbDRQTl9TWEotYlNtUk5MN0F4THxBTl9pYzRlV3hXQl9kbDBBZnVtUHNjejVGZkFaMl9QaHJHaWFlakYtZDB2ZDFrUHVkQzJWUGRlTTRqdW5iVUw3MUtnZXEyamZXNUFWQ3lnMFBCVHpDZEJSTEZLczYtNU90ZUc3&q=https%3A%2F%2Fwww.instagram.com%2Fcaptainjack.heyo%2F",
+                   "webPageType": "WEB_PAGE_TYPE_UNKNOWN",
+                   "rootVe": 83769
+                  }
+                 },
+                 "urlEndpoint": {
+                  "url": "https://www.youtube.com/redirect?event=channel_description&redir_token=QUZZTVljRWllbDRQTl9TWEotYlNtUk5MN0F4THxBTl9pYzRlV3hXQl9kbDBBZnVtUHNjejVGZkFaMl9QaHJHaWFlakYtZDB2ZDFrUHVkQzJWUGRlTTRqdW5iVUw3MUtnZXEyamZXNUFWQ3lnMFBCVHpDZEJSTEZLczYtNU90ZUc3&q=https%3A%2F%2Fwww.instagram.com%2Fcaptainjack.heyo%2F",
+                  "target": "TARGET_NEW_WINDOW",
+                  "nofollow": true
+                 }
+                }
+               }
+              }
+             ]
+            },
+            "favicon": {
+             "sources": [
+              {
+               "url": "https://encrypted-tbn3.gstatic.com/favicon-tbn?q=tbn:ANd9GcSfLSwm05yS0BK4Kb28e-NTcQAsNLQfDCkRW2BwGzQ_4QLgT3HvRwy5O9kLRnUU-QhzvJantOSGhq8NOQp7EHd_WEvUNR6WW1Pp0THXuSRzNiJgToeoCA",
+               "width": 16,
+               "height": 16
+              },
+              {
+               "url": "https://encrypted-tbn3.gstatic.com/favicon-tbn?q=tbn:ANd9GcTH22r6JfLoEVSgX7gIeBTsmmcp7AsEm8At_mnY9_tLW9u124DyV4paGEu-QpXmBXqIPcMSTlv8F5UB5GjedwV6-DWtz_zxEicpcXo-pYZ0TEWaecy4uQ",
+               "width": 24,
+               "height": 24
+              },
+              {
+               "url": "https://encrypted-tbn3.gstatic.com/favicon-tbn?q=tbn:ANd9GcSWlv5P_cZjL7BphqIddo1r9qha-mEeR_IrjurxF2rEX92_l8yP2L39z9A5Jz1vDA2t2bGvK7gan4DQhBGo42UC0eOq504-dvGEAXDsbkJix84htkBwug",
+               "width": 32,
+               "height": 32
+              },
+              {
+               "url": "https://encrypted-tbn3.gstatic.com/favicon-tbn?q=tbn:ANd9GcQqzHpvesYBsmdBWDYRugCp85G91_-8BqpRJCqkxzl3sWgZa49u-jBCd5bzJhXJYOZjTQYo5t8mhvsLis-Syy1nIqFtNrFoovCj3bE34cmrKiRjMopfxQ",
+               "width": 48,
+               "height": 48
+              },
+              {
+               "url": "https://encrypted-tbn3.gstatic.com/favicon-tbn?q=tbn:ANd9GcQbTG5M4X0YjLq8kiotXH-dm7lV8FQiy_AcEvfMus3rOAW1C3-GpKJ0jH21fBy6_fVG049HuigmOXlF5dvCjABVv788qacJpWHL6XQI6jnAESfCfD5jvw",
+               "width": 50,
+               "height": 50
+              },
+              {
+               "url": "https://encrypted-tbn3.gstatic.com/favicon-tbn?q=tbn:ANd9GcSFSQsKHXrO5erkzaT2KvuVhN0LpXbPxo4ITKyKnQPSmHOLBkDR8KE0mdsMnLBztoNFQ0MGg9k6cUXhtZ_NY0Y06Mf1ywHug6oQEJlqr2uEyy6xlMLBVA",
+               "width": 64,
+               "height": 64
+              },
+              {
+               "url": "https://encrypted-tbn3.gstatic.com/favicon-tbn?q=tbn:ANd9GcQAvxbIjNz253fBLSmkpLq2bO-583cKsl7RkQaKEyo8BPLR9Q5Qoa0mTvoTABEVktDc6DLw0VcX4Qb82mqZhFgCbyUgV9Ab-f0RFOgvaeQl7inOSfoYfg",
+               "width": 96,
+               "height": 96
+              },
+              {
+               "url": "https://encrypted-tbn3.gstatic.com/favicon-tbn?q=tbn:ANd9GcSRJq-gVmK6yOLCGwtrodHEQYTNRSruRrJmM1scx50X9XzjSHrUqo59LQN9VnVGA1ofDs6YoiHSIaIDbB6vVs9ncfT7rzMsiQf9BOzFu5IMe0Uu5ZkeqL8",
+               "width": 128,
+               "height": 128
+              },
+              {
+               "url": "https://encrypted-tbn3.gstatic.com/favicon-tbn?q=tbn:ANd9GcRkINqbo82T1cgBnz-VGKBEoJa5tQD1diIUOZf2pl7p0nLYa3qlgnPXUeGwFNU8-El3YnYg9s6xeqqBtrOGBIVRweP-BLTrMGe7FahdVTOaqEdwCwqZteg",
+               "width": 180,
+               "height": 180
+              },
+              {
+               "url": "https://encrypted-tbn3.gstatic.com/favicon-tbn?q=tbn:ANd9GcRMnk5lytM1g9HJQSf7bM5Xfi4yFD5Vyri4jzLc1D4JUjmBYMab9mUK04YRfRwyHmDMutbz5OgS4cg_9Z2lEmyotPVb3TDyE7YkLlpC2ywK7bDnmpmQTRw",
+               "width": 256,
+               "height": 256
+              }
+             ]
+            }
+           }
+          },
+          {
+           "channelExternalLinkViewModel": {
+            "title": {
+             "content": "Official Website"
+            },
+            "link": {
+             "content": "captain-jack.com",
+             "commandRuns": [
+              {
+               "startIndex": 0,
+               "length": 16,
+               "onTap": {
+                "innertubeCommand": {
+                 "clickTrackingParams": "CAcQobIHGAQiEwjgy5WLoaKXAxXWSEwIHVyiLDrKAQS1g1dj",
+                 "commandMetadata": {
+                  "webCommandMetadata": {
+                   "url": "https://www.youtube.com/redirect?event=channel_description&redir_token=QUZZTVljRzFQYktPUWZESjVLdWxLVTQybTdsOHxBTl9pYzRjT1kwYzNmakFjOWphdDFWMC00RkFOY3c2dXRXcURnenV1Ykp0dzVPNGlUUEt5TTJ5RGQ2cmIxdWlDRnJmYTNSemRmWTgxY0Y4ZGxqQXZnaU5HSkF2N1gxZkY1bDdh&q=http%3A%2F%2Fcaptain-jack.com",
+                   "webPageType": "WEB_PAGE_TYPE_UNKNOWN",
+                   "rootVe": 83769
+                  }
+                 },
+                 "urlEndpoint": {
+                  "url": "https://www.youtube.com/redirect?event=channel_description&redir_token=QUZZTVljRzFQYktPUWZESjVLdWxLVTQybTdsOHxBTl9pYzRjT1kwYzNmakFjOWphdDFWMC00RkFOY3c2dXRXcURnenV1Ykp0dzVPNGlUUEt5TTJ5RGQ2cmIxdWlDRnJmYTNSemRmWTgxY0Y4ZGxqQXZnaU5HSkF2N1gxZkY1bDdh&q=http%3A%2F%2Fcaptain-jack.com",
+                  "target": "TARGET_NEW_WINDOW",
+                  "nofollow": true
+                 }
+                }
+               }
+              }
+             ]
+            },
+            "favicon": {
+             "sources": [
+              {
+               "url": "https://encrypted-tbn0.gstatic.com/favicon-tbn?q=tbn:ANd9GcRyfIsUyAZgPFTxgNtca44IzoZKwDXAhwgUBaB-1UWdrV_h0A8h3wMc9MO9htMF124QMoUvvAwQbV72DMNINCItDbnb9iW8eMkzTMZRQ8S8HktyeAw",
+               "width": 16,
+               "height": 16
+              },
+              {
+               "url": "https://encrypted-tbn0.gstatic.com/favicon-tbn?q=tbn:ANd9GcTDfmUqi0g1D_EVQ1vWuz5d1WWmeuSsHj_PjrjYd129oA6acv7LWDyoKMZ6rMWNjx8EK61Fx9csgsA8psQcP6v2GJDuCZRzFtgnkpX6-RCOiIU1TdU",
+               "width": 24,
+               "height": 24
+              },
+              {
+               "url": "https://encrypted-tbn0.gstatic.com/favicon-tbn?q=tbn:ANd9GcRWJn391NVN5SfHcubwQZMKhcyZW-iBxfoaYmmVlvvAxGQKgXpZwpo9OH0t7X1FmESKsVAx5iJgWuFS-Q9NvHP6KSqMBpFCHUz6pGPdnPHB3NndrZo",
+               "width": 32,
+               "height": 32
+              },
+              {
+               "url": "https://encrypted-tbn0.gstatic.com/favicon-tbn?q=tbn:ANd9GcRDFi1L2ZzXAZFeAKlIoXjGou3gwod42YlW9e3r8Vr_AsCEjQRGVbkzJjat6Hst8bdaFTp1uvqrZU8zpiAZWAcDzBHzBfdpDrYXJSrUAcm_uBi0QJk",
+               "width": 48,
+               "height": 48
+              },
+              {
+               "url": "https://encrypted-tbn0.gstatic.com/favicon-tbn?q=tbn:ANd9GcQYoAjag7U0JAcmYsxCQSXlq-vxDFe3IYwmllCKswDek7SitH2JP8Y3-HF5JGWiXGwHMR3KO4SqlcG4GduQExJQ0nry29zp_0sBbTGqvdJYwP9i1hA",
+               "width": 50,
+               "height": 50
+              },
+              {
+               "url": "https://encrypted-tbn0.gstatic.com/favicon-tbn?q=tbn:ANd9GcRRFZI0HRPWa_inpYfSoWo__Unr3QD9PLkEYSiWgfutEvCfa4jeBkyN4O6BfZh_tGF2SBW_nS4RP7Zw1cqme7lZdzY1p1KrDfXj2QfIL9GzuTuSrlo",
+               "width": 64,
+               "height": 64
+              },
+              {
+               "url": "https://encrypted-tbn0.gstatic.com/favicon-tbn?q=tbn:ANd9GcQwUHoV8R67ayAJV30d8zaNWvRuvHmvhZ8KZbjwh0rgpe_YOKyoXyeK9cMR-PowfyCJwXNQRwmpMQBSrsXyLhASlT7AzLM4EbkuuQPEyBBvW3I5bR8",
+               "width": 96,
+               "height": 96
+              },
+              {
+               "url": "https://encrypted-tbn0.gstatic.com/favicon-tbn?q=tbn:ANd9GcTx5LFPpUDoxMyiVYBQ0oOiFq25WX_IPPvlXkxUGEB1AfZ2qnNVn0j4r1uBVCy88EiRjfC5SH_0RmBDYtPcNRnVmOFYNREbMhHK5W8BmO-HTxuR_0kL",
+               "width": 128,
+               "height": 128
+              },
+              {
+               "url": "https://encrypted-tbn0.gstatic.com/favicon-tbn?q=tbn:ANd9GcTWcxIDd3gkL1KJiQo18Io3Kapl3JPhaKmQLBFMCvM_VFXrYedEgjLeZqTilGFpnLN3hbYNR4MUFUVaMpabx83aUYrIhcpFZI__c4y02EplBZknS7ZN",
+               "width": 180,
+               "height": 180
+              },
+              {
+               "url": "https://encrypted-tbn0.gstatic.com/favicon-tbn?q=tbn:ANd9GcRgbyZRhHa1iTv_vFaqJciEQi9jwgbd4LoRboYaEktux54GmW9F8UJRPwyq8948oAEU_hdvsjY_kzxys2bUFJxARFXb5KVnvBPu2xU0lb-M9mlIZVQi",
+               "width": 256,
+               "height": 256
+              }
+             ]
+            }
+           }
+          }
+         ],
+         "displayCanonicalChannelUrl": "www.youtube.com/@captainjackofficial",
+         "rendererContext": {
+          "loggingContext": {
+           "loggingDirectives": {
+            "trackingParams": "CAYQo4sSIhMI4MuVi6GilwMV1khMCB1coiw6",
+            "visibility": {
+             "types": "12"
+            }
+           }
+          }
+         }
+        }
+       },
+       "shareChannel": {
+        "buttonRenderer": {
+         "style": "STYLE_DEFAULT",
+         "size": "SIZE_DEFAULT",
+         "text": {
+          "runs": [
+           {
+            "text": "Share channel"
+           }
+          ]
+         },
+         "icon": {
+          "iconType": "SHARE"
+         },
+         "trackingParams": "CAEQ8FsiEwjgy5WLoaKXAxXWSEwIHVyiLDo=",
+         "accessibilityData": {
+          "accessibilityData": {
+           "label": "Share channel"
+          }
+         },
+         "command": {
+          "clickTrackingParams": "CAEQ8FsiEwjgy5WLoaKXAxXWSEwIHVyiLDrKAQS1g1dj",
+          "commandMetadata": {
+           "webCommandMetadata": {
+            "sendPost": true
+           }
+          },
+          "signalServiceEndpoint": {
+           "signal": "CLIENT_SIGNAL",
+           "actions": [
+            {
+             "clickTrackingParams": "CAEQ8FsiEwjgy5WLoaKXAxXWSEwIHVyiLDrKAQS1g1dj",
+             "openPopupAction": {
+              "popup": {
+               "menuPopupRenderer": {
+                "items": [
+                 {
+                  "menuServiceItemRenderer": {
+                   "text": {
+                    "runs": [
+                     {
+                      "text": "Share channel"
+                     }
+                    ]
+                   },
+                   "trackingParams": "CAQQ0rYLGAEiEwjgy5WLoaKXAxXWSEwIHVyiLDo=",
+                   "command": {
+                    "clickTrackingParams": "CAQQ0rYLGAEiEwjgy5WLoaKXAxXWSEwIHVyiLDrKAQS1g1dj",
+                    "commandMetadata": {
+                     "webCommandMetadata": {
+                      "sendPost": true,
+                      "apiUrl": "/youtubei/v1/share/get_share_panel"
+                     }
+                    },
+                    "shareEntityServiceEndpoint": {
+                     "serializedShareEntity": "GhhVQ2E4UmlVMnN0XzQ4QUE0V3NjYndZVlE%3D",
+                     "commands": [
+                      {
+                       "clickTrackingParams": "CAQQ0rYLGAEiEwjgy5WLoaKXAxXWSEwIHVyiLDrKAQS1g1dj",
+                       "openPopupAction": {
+                        "popup": {
+                         "unifiedSharePanelRenderer": {
+                          "trackingParams": "CAUQjmIiEwjgy5WLoaKXAxXWSEwIHVyiLDo=",
+                          "showLoadingSpinner": true
+                         }
+                        },
+                        "popupType": "DIALOG",
+                        "beReused": true
+                       }
+                      }
+                     ]
+                    }
+                   }
+                  }
+                 },
+                 {
+                  "menuServiceItemRenderer": {
+                   "text": {
+                    "runs": [
+                     {
+                      "text": "Copy channel ID"
+                     }
+                    ]
+                   },
+                   "trackingParams": "CAIQ07YLGAIiEwjgy5WLoaKXAxXWSEwIHVyiLDo=",
+                   "command": {
+                    "clickTrackingParams": "CAIQ07YLGAIiEwjgy5WLoaKXAxXWSEwIHVyiLDrKAQS1g1dj",
+                    "copyTextEndpoint": {
+                     "text": "UCa8RiU2st_48AA4WscbwYVQ",
+                     "successActions": [
+                      {
+                       "clickTrackingParams": "CAIQ07YLGAIiEwjgy5WLoaKXAxXWSEwIHVyiLDrKAQS1g1dj",
+                       "commandMetadata": {
+                        "webCommandMetadata": {
+                         "sendPost": true
+                        }
+                       },
+                       "signalServiceEndpoint": {
+                        "signal": "CLIENT_SIGNAL",
+                        "actions": [
+                         {
+                          "clickTrackingParams": "CAIQ07YLGAIiEwjgy5WLoaKXAxXWSEwIHVyiLDrKAQS1g1dj",
+                          "openPopupAction": {
+                           "popup": {
+                            "notificationActionRenderer": {
+                             "responseText": {
+                              "runs": [
+                               {
+                                "text": "Channel ID copied to clipboard"
+                               }
+                              ]
+                             },
+                             "trackingParams": "CAMQuWoiEwjgy5WLoaKXAxXWSEwIHVyiLDo="
+                            }
+                           },
+                           "popupType": "TOAST"
+                          }
+                         }
+                        ]
+                       }
+                      }
+                     ]
+                    }
+                   }
+                  }
+                 }
+                ]
+               }
+              },
+              "popupType": "RESPONSIVE_DROPDOWN"
+             }
+            }
+           ]
+          }
+         }
+        }
+       }
+      }
+     }
+    ],
+    "targetId": "6f29c0ea-0000-285c-8065-d4f547ef89a4"
+   }
+  }
+ ]
+}

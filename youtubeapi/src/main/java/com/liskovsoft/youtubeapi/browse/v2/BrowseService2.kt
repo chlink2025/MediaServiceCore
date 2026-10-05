@@ -1,5 +1,6 @@
 package com.liskovsoft.youtubeapi.browse.v2
 
+import com.liskovsoft.mediaserviceinterfaces.data.ChannelHeader
 import com.liskovsoft.mediaserviceinterfaces.data.MediaGroup
 import com.liskovsoft.mediaserviceinterfaces.data.MediaItem
 import com.liskovsoft.youtubeapi.browse.v2.gen.*
@@ -423,6 +424,8 @@ internal open class BrowseService2 {
             RetrofitHelper.get(home, auth)
         }
 
+        val channelHeader: ChannelHeader? = homeResult?.getChannelHeader(channelId)
+
         var shortTab: MediaGroup? = null
 
         homeResult?.let { it.getTabs()?.drop(1)?.forEach { // skip first tab - Home (repeats Videos)
@@ -454,6 +457,8 @@ internal open class BrowseService2 {
         //    }
         //}
 
+        channelHeader?.let { result.add(0, ChannelHeaderMediaGroup(it, channelOptions)) }
+
         return result.ifEmpty { null }
     }
 
@@ -462,7 +467,48 @@ internal open class BrowseService2 {
             return null
         }
 
-        return getBrowseRowsTV({ BrowseApiHelper.getChannelQuery(it, channelId, params) }, MediaGroup.TYPE_CHANNEL, MediaGroup.TYPE_CHANNEL_UPLOADS)
+        val rowsOptions = MediaGroupOptions.create(MediaGroup.TYPE_CHANNEL)
+        val gridOptions = MediaGroupOptions.create(MediaGroup.TYPE_CHANNEL_UPLOADS)
+        val browseResult = mBrowseApi.getBrowseResultTV(BrowseApiHelper.getChannelQuery(rowsOptions.clientTV, channelId, params))
+
+        return RetrofitHelper.get(browseResult)?.let {
+            val result = mutableListOf<MediaGroup?>()
+
+            it.getShelves()?.forEach { shelf -> if (shelf != null) addOrMerge(result, ShelfSectionMediaGroup(shelf, rowsOptions)) }
+
+            if (result.isEmpty()) // playlist
+                addOrMerge(result, BrowseMediaGroupTV(it, gridOptions))
+
+            it.getChannelHeader(channelId)?.let { header -> result.add(0, ChannelHeaderMediaGroup(header, rowsOptions)) }
+
+            Pair(result, it.getContinuationToken())
+        }
+    }
+
+    /**
+     * NEWTUBE(channel-about): full About panel (links, artist bio, stats). Lazy: only the About
+     * sheet asks for it. The channel page's own /browse already carries the bio and stats inline,
+     * but not the external links - the WEB channel page holds the About engagement-panel token
+     * that yields them.
+     */
+    open fun getChannelAbout(channelId: String?): ChannelHeader? {
+        if (channelId == null) {
+            return null
+        }
+
+        val webChannelResult = RetrofitHelper.get(
+            mBrowseApi.getBrowseResult(BrowseApiHelper.getChannelQuery(AppClient.WEB, channelId)), false)
+
+        val aboutPanelToken = webChannelResult?.getAboutPanelToken()
+
+        if (aboutPanelToken != null) {
+            val aboutResult = RetrofitHelper.get(
+                mBrowseApi.getAboutChannelResult(BrowseApiHelper.getContinuationQuery(AppClient.WEB, aboutPanelToken)), false)
+
+            aboutResult?.getChannelHeader(channelId)?.let { return it }
+        }
+
+        return webChannelResult?.getChannelHeader(channelId)
     }
 
     /**

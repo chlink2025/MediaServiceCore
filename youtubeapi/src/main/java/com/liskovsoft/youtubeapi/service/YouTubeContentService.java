@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 
 import com.liskovsoft.mediaserviceinterfaces.ContentService;
+import com.liskovsoft.mediaserviceinterfaces.data.ChannelHeader;
 import com.liskovsoft.mediaserviceinterfaces.data.MediaGroup;
 import com.liskovsoft.mediaserviceinterfaces.data.MediaItem;
 import com.liskovsoft.sharedutils.helpers.Helpers;
@@ -416,6 +417,15 @@ class YouTubeContentService implements ContentService {
                 kotlin.Pair<List<MediaGroup>, String> channel = getBrowseService2().getChannel(canonicalId, params);
                 emitGroups(emitter, channel, true);
             }
+        });
+    }
+
+    @Override
+    public Observable<ChannelHeader> getChannelAboutObserve(String channelId) {
+        return RxHelper.fromCallable(() -> {
+            checkSigned();
+
+            return getBrowseService2().getChannelAbout(channelId);
         });
     }
 

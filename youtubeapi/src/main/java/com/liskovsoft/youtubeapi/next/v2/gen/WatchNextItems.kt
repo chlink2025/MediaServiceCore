@@ -231,7 +231,8 @@ internal data class EngagementPanel(
             val structuredDescriptionContentRenderer: StructuredDescriptionContentRenderer?,
             val macroMarkersListRenderer: MacroMarkersListRenderer?,
             val sectionListRenderer: SectionListRenderer?,
-            val listViewModel: ListViewModel?
+            val listViewModel: ListViewModel?,
+            val aboutChannelViewModel: AboutChannelViewModel? // NEWTUBE(channel-about)
         ) {
             data class StructuredDescriptionContentRenderer(
                  val items: List<Item?>?

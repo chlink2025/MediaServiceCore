@@ -82,7 +82,8 @@ internal data class RichSectionRenderer(
 
 internal data class TvSurfaceContentRenderer(
     val content: Content?,
-    val continuation: ContinuationItem?
+    val continuation: ContinuationItem?,
+    val header: ChannelHeaderWrapper? // NEWTUBE(channel-about): channel bio lives here
 ) {
     data class Content(
         val sectionListRenderer: ShelfListWrapper?,
@@ -222,7 +223,8 @@ internal data class Shelf(
     val playlistVideoListRenderer: PlaylistVideoListRenderer?,
     val gridRenderer: GridRenderer?,
     val videoRenderer: VideoItem?,
-    val playlistRenderer: PlaylistItem?
+    val playlistRenderer: PlaylistItem?,
+    val continuationItemRenderer: ContinuationItemRenderer? // NEWTUBE(channel-about): About panel continuation
 )
 
 internal data class PlaylistVideoListRenderer(

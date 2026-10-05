@@ -105,7 +105,7 @@ internal abstract class BaseMediaGroup(private val options: MediaGroupOptions): 
         return null
     }
 
-    override fun isEmpty(): Boolean {
+    open override fun isEmpty(): Boolean {
         return _mediaItemList.isNullOrEmpty()
     }
 }

@@ -51,6 +51,15 @@ internal interface BrowseApi {
     @POST("https://www.youtube.com/youtubei/v1/browse")
     fun getContinuationResult(@Body continuationQuery: String?): Call<ContinuationResult?>
 
+    // NEWTUBE(channel-about): About engagement panel continuation (links, artist bio, stats).
+    @Headers(
+        "Content-Type: application/json",
+        "User-Agent: " + DefaultHeaders.USER_AGENT_WEB,
+        "Referer: https://www.youtube.com/"
+    )
+    @POST("https://www.youtube.com/youtubei/v1/browse")
+    fun getAboutChannelResult(@Body aboutChannelQuery: String?): Call<AboutChannelResult?>
+
     @Headers(
         "Content-Type: application/json",
         "User-Agent: " + DefaultHeaders.USER_AGENT_TV,

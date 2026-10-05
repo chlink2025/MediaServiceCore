@@ -1,0 +1,328 @@
+{
+ "contents": {
+  "tvBrowseRenderer": {
+   "content": {
+    "tvSurfaceContentRenderer": {
+     "header": {
+      "channelHeaderRenderer": {
+       "backgroundImage": {
+        "thumbnails": [
+         {
+          "url": "https://yt3.googleusercontent.com/zi_48HwHU4s0Hnb6tZuvRzTfCPHrLEnrtIMDLzMauDEyDmURh9JZ4wrNd3lKr7m9uVnT4YjYKw=w320-fcrop64=1,00000000ffffffff-k-c0xffffffff-no-nd-rj",
+          "width": 320,
+          "height": 180
+         },
+         {
+          "url": "https://yt3.googleusercontent.com/zi_48HwHU4s0Hnb6tZuvRzTfCPHrLEnrtIMDLzMauDEyDmURh9JZ4wrNd3lKr7m9uVnT4YjYKw=w854-fcrop64=1,00000000ffffffff-k-c0xffffffff-no-nd-rj",
+          "width": 854,
+          "height": 480
+         },
+         {
+          "url": "https://yt3.googleusercontent.com/zi_48HwHU4s0Hnb6tZuvRzTfCPHrLEnrtIMDLzMauDEyDmURh9JZ4wrNd3lKr7m9uVnT4YjYKw=w1280-fcrop64=1,00000000ffffffff-k-c0xffffffff-no-nd-rj",
+          "width": 1280,
+          "height": 720
+         },
+         {
+          "url": "https://yt3.googleusercontent.com/zi_48HwHU4s0Hnb6tZuvRzTfCPHrLEnrtIMDLzMauDEyDmURh9JZ4wrNd3lKr7m9uVnT4YjYKw=w1920-fcrop64=1,00000000ffffffff-k-c0xffffffff-no-nd-rj",
+          "width": 1920,
+          "height": 1080
+         },
+         {
+          "url": "https://yt3.googleusercontent.com/zi_48HwHU4s0Hnb6tZuvRzTfCPHrLEnrtIMDLzMauDEyDmURh9JZ4wrNd3lKr7m9uVnT4YjYKw=w2120-fcrop64=1,00000000ffffffff-k-c0xffffffff-no-nd-rj",
+          "width": 2120,
+          "height": 1192
+         }
+        ]
+       },
+       "avatar": {
+        "thumbnails": [
+         {
+          "url": "https://yt3.googleusercontent.com/qu4TmIaYUlS41-dJ9gZ7DUR3nilvmB5_11i6OKSdvNnBNiyOusZP1bMN6ICnuxtjFBb6ioKgRQ=s72-c-k-c0x00ffffff-no-rj",
+          "width": 72,
+          "height": 72
+         }
+        ]
+       },
+       "title": {
+        "simpleText": "Marques Brownlee"
+       },
+       "subtitle": {
+        "lineRenderer": {
+         "items": [
+          {
+           "lineItemRenderer": {
+            "text": {
+             "runs": [
+              {
+               "text": "@mkbhd",
+               "textColor": 4294967295
+              }
+             ]
+            }
+           }
+          },
+          {
+           "lineItemRenderer": {
+            "text": {
+             "simpleText": "•"
+            }
+           }
+          },
+          {
+           "lineItemRenderer": {
+            "text": {
+             "accessibility": {
+              "accessibilityData": {
+               "label": "21.3 million subscribers"
+              }
+             },
+             "simpleText": "21.3M subscribers"
+            }
+           }
+          }
+         ]
+        }
+       },
+       "buttons": [
+        {
+         "buttonRenderer": {
+          "isDisabled": false,
+          "text": {
+           "runs": [
+            {
+             "text": "Play mix"
+            }
+           ]
+          },
+          "icon": {
+           "iconType": "MIX"
+          },
+          "navigationEndpoint": {
+           "clickTrackingParams": "CAkQ3MoMGAAiEwiwmtiJoaKXAxWffEwIHdEHNhvKAQSWQ9Ev",
+           "watchEndpoint": {
+            "videoId": "MV1qaFv4VUg",
+            "params": "KgtNVjFxYUZ2NFZVZyoLWHhPaDEyVWhnMDgqC3ZaZGJiTjNGQ3pFKgtPWTJ4MFR5S3pJUSoLaFJTTUpHczBZTWcqC0VGaUhtNldqaE5BKgtNYjZIN3Ryek1mSSoLbWZtZFhQVDduQU0qC0prUlhoZTNLYVBFKgtITFVhbXdYUTIxOCoLM2lSVXdWelJEWlEqC2hhRGptQlQ5dHU0KgtzZnlMNEJzd1VlRSoLRlZ3VjVCeEo4TTQqC3ZKRWJQMlZkcTJVKgtORUNCQ3hFRk1DbyoLdi1zQ1pOM0ZiUjAqC1F6dEZwektzZGVBKgtWSkk4OFFJVzdINCoLcWNIMndnUkxpVjgqC2MzNDdvWVFPNTdBKgs4Nkd5MDM1el9LQSoLZVhhMm5kaG1hdEkqC1Y3SjlhTXlfQ0ZrMgdVcCBuZXh0gAMB",
+            "watchEndpointSupportedOnesieConfig": {
+             "html5PlaybackOnesieConfig": {
+              "commonConfig": {
+               "url": "https://rr3---sn-o097znse.googlevideo.com/initplayback?source=youtube&oeis=1&c=TVHTML5&oad=3200&ovd=3200&oaad=3200&oavd=3200&ocs=700&oewis=1&oputc=1&msp=1&odepv=1&id=315d6a685bf85548&ip=13.57.28.96&initcwndbps=1406625&mt=1791181725"
+              }
+             }
+            }
+           }
+          },
+          "trackingParams": "CAkQ3MoMGAAiEwiwmtiJoaKXAxWffEwIHdEHNhs=",
+          "onFocusCommand": {
+           "clickTrackingParams": "CAkQ3MoMGAAiEwiwmtiJoaKXAxWffEwIHdEHNhvKAQSWQ9Ev",
+           "startInlinePlaybackCommand": {
+            "muted": false,
+            "delayMs": 3000,
+            "playbackEndpoint": {
+             "clickTrackingParams": "CAkQ3MoMGAAiEwiwmtiJoaKXAxWffEwIHdEHNhvKAQSWQ9Ev",
+             "watchEndpoint": {
+              "videoId": "MV1qaFv4VUg",
+              "params": "KgtNVjFxYUZ2NFZVZyoLWHhPaDEyVWhnMDgqC3ZaZGJiTjNGQ3pFKgtPWTJ4MFR5S3pJUSoLaFJTTUpHczBZTWcqC0VGaUhtNldqaE5BKgtNYjZIN3Ryek1mSSoLbWZtZFhQVDduQU0qC0prUlhoZTNLYVBFKgtITFVhbXdYUTIxOCoLM2lSVXdWelJEWlEqC2hhRGptQlQ5dHU0KgtzZnlMNEJzd1VlRSoLRlZ3VjVCeEo4TTQqC3ZKRWJQMlZkcTJVKgtORUNCQ3hFRk1DbyoLdi1zQ1pOM0ZiUjAqC1F6dEZwektzZGVBKgtWSkk4OFFJVzdINCoLcWNIMndnUkxpVjgqC2MzNDdvWVFPNTdBKgs4Nkd5MDM1el9LQSoLZVhhMm5kaG1hdEkqC1Y3SjlhTXlfQ0ZrMgdVcCBuZXh0gAMB",
+              "watchEndpointSupportedOnesieConfig": {
+               "html5PlaybackOnesieConfig": {
+                "commonConfig": {
+                 "url": "https://rr3---sn-o097znse.googlevideo.com/initplayback?source=youtube&oeis=1&c=TVHTML5&oad=3200&ovd=3200&oaad=3200&oavd=3200&ocs=700&oewis=1&oputc=1&msp=1&odepv=1&id=315d6a685bf85548&ip=13.57.28.96&initcwndbps=1406625&mt=1791181725"
+                }
+               }
+              }
+             }
+            },
+            "blockAdoption": false
+           }
+          }
+         }
+        },
+        {
+         "subscribeButtonRenderer": {
+          "buttonText": {
+           "runs": [
+            {
+             "text": "Subscribe"
+            }
+           ]
+          },
+          "subscribed": false,
+          "enabled": true,
+          "type": "FREE",
+          "channelId": "UCBJycsmduvYEL83R_U4JriQ",
+          "showPreferences": false,
+          "subscribedButtonText": {
+           "runs": [
+            {
+             "text": "Subscribed"
+            }
+           ]
+          },
+          "unsubscribedButtonText": {
+           "runs": [
+            {
+             "text": "Subscribe"
+            }
+           ]
+          },
+          "trackingParams": "CAgQmysYASITCLCa2ImhopcDFZ98TAgd0Qc2GyjyODIJY2hhbm5lbHM0",
+          "unsubscribeButtonText": {
+           "runs": [
+            {
+             "text": "Unsubscribe"
+            }
+           ]
+          },
+          "serviceEndpoints": [
+           {
+            "authDeterminedCommand": {
+             "authenticatedCommand": {
+              "clickTrackingParams": "CAgQmysYASITCLCa2ImhopcDFZ98TAgd0Qc2GyjyODIJY2hhbm5lbHM0ygEElkPRLw==",
+              "subscribeEndpoint": {
+               "channelIds": [
+                "UCBJycsmduvYEL83R_U4JriQ"
+               ],
+               "params": "EgIIAhgAKiDSoN25ARoSGFVDQkp5Y3NtZHV2WUVMODNSX1U0SnJpUQ%3D%3D"
+              }
+             },
+             "unauthenticatedCommand": {
+              "clickTrackingParams": "CAgQmysYASITCLCa2ImhopcDFZ98TAgd0Qc2G8oBBJZD0S8=",
+              "authRequiredCommand": {
+               "identityActionContext": {
+                "eventTrigger": "ACCOUNT_EVENT_TRIGGER_SUBSCRIBE",
+                "nextEndpoint": {
+                 "clickTrackingParams": "CAgQmysYASITCLCa2ImhopcDFZ98TAgd0Qc2G8oBBJZD0S8=",
+                 "commandExecutorCommand": {
+                  "commands": [
+                   {
+                    "clickTrackingParams": "CAgQmysYASITCLCa2ImhopcDFZ98TAgd0Qc2G8oBBJZD0S8=",
+                    "signalAction": {
+                     "signal": "CLOSE_POPUP"
+                    }
+                   },
+                   {
+                    "clickTrackingParams": "CAgQmysYASITCLCa2ImhopcDFZ98TAgd0Qc2GyjyODIJY2hhbm5lbHM0ygEElkPRLw==",
+                    "subscribeEndpoint": {
+                     "channelIds": [
+                      "UCBJycsmduvYEL83R_U4JriQ"
+                     ],
+                     "params": "EgIIAhgAKiDSoN25ARoSGFVDQkp5Y3NtZHV2WUVMODNSX1U0SnJpUQ%3D%3D"
+                    }
+                   }
+                  ]
+                 }
+                }
+               }
+              }
+             }
+            }
+           },
+           {
+            "clickTrackingParams": "CAgQmysYASITCLCa2ImhopcDFZ98TAgd0Qc2GyjyODIJY2hhbm5lbHM0ygEElkPRLw==",
+            "unsubscribeEndpoint": {
+             "channelIds": [
+              "UCBJycsmduvYEL83R_U4JriQ"
+             ],
+             "params": "CgIIAhgA"
+            }
+           }
+          ],
+          "subscribedEntityKey": "EhhVQ0JKeWNzbWR1dllFTDgzUl9VNEpyaVEgMygB"
+         }
+        }
+       ],
+       "selectableDescription": {
+        "selectableTextRenderer": {
+         "compactDescription": {
+          "runs": [
+           {
+            "text": "MKBHD: Quality Tech Videos | YouTuber | Geek | Consumer Electronics | Tech Head | Internet Personality!"
+           },
+           {
+            "text": " ...more"
+           }
+          ]
+         },
+         "onSelectCommand": {
+          "clickTrackingParams": "CAUQlKcMIhMIsJrYiaGilwMVn3xMCB3RBzYbygEElkPRLw==",
+          "showEngagementPanelEndpoint": {
+           "engagementPanel": {
+            "engagementPanelSectionListRenderer": {
+             "header": {
+              "engagementPanelTitleHeaderRenderer": {
+               "title": {
+                "simpleText": "Description"
+               },
+               "trackingParams": "CAYQ040EIhMIsJrYiaGilwMVn3xMCB3RBzYb"
+              }
+             },
+             "content": {
+              "aboutChannelViewModel": {
+               "description": "MKBHD: Quality Tech Videos | YouTuber | Geek | Consumer Electronics | Tech Head | Internet Personality!\n\nbusiness@MKBHD.com\n\nNYC",
+               "additionalInfoLabel": {
+                "content": "More info"
+               },
+               "infoRows": [
+                {
+                 "label": "United States",
+                 "icon": {
+                  "iconType": "PRIVACY_PUBLIC"
+                 }
+                },
+                {
+                 "label": "Joined Mar 21, 2008",
+                 "icon": {
+                  "iconType": "INFO_OUTLINE"
+                 }
+                },
+                {
+                 "label": "21.3M subscribers",
+                 "icon": {
+                  "iconType": "PERSON_RADAR"
+                 }
+                },
+                {
+                 "label": "1,856 videos",
+                 "icon": {
+                  "iconType": "MY_VIDEOS"
+                 }
+                },
+                {
+                 "label": "5,742,659,684 views",
+                 "icon": {
+                  "iconType": "TRENDING_UP"
+                 }
+                }
+               ],
+               "rendererContext": {
+                "loggingContext": {
+                 "loggingDirectives": {
+                  "trackingParams": "CAcQo4sSIhMIsJrYiaGilwMVn3xMCB3RBzYb"
+                 }
+                }
+               }
+              }
+             },
+             "backgroundScrimStyle": "ENGAGEMENT_PANEL_BACKGROUND_SCRIM_STYLE_DEFAULT"
+            }
+           },
+           "identifier": {
+            "surface": "ENGAGEMENT_PANEL_SURFACE_BROWSE",
+            "tag": "detailed-description-ep-identifier"
+           }
+          }
+         },
+         "loggingDirectives": {
+          "trackingParams": "CAUQlKcMIhMIsJrYiaGilwMVn3xMCB3RBzYb",
+          "gestures": {
+           "types": "2"
+          }
+         }
+        }
+       }
+      }
+     }
+    }
+   }
+  }
+ }
+}

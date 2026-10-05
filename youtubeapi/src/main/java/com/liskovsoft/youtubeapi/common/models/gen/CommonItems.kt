@@ -437,8 +437,15 @@ internal data class InnertubeCommand(
     val continuationCommand: ContinuationCommand?,
     val commandExecutorCommand: CommandExecutorCommand?,
     val showMenuCommand: ShowMenuCommand?,
-    val openPopupAction: PopupActionItem?
-)
+    val openPopupAction: PopupActionItem?,
+    // NEWTUBE(channel-about): channel header "About" panel trigger and web link targets.
+    val showEngagementPanelEndpoint: ShowEngagementPanelEndpoint?,
+    val urlEndpoint: UrlEndpoint?
+) {
+    data class UrlEndpoint(
+        val url: String?
+    )
+}
 
 internal data class ShowSheetCommand(
     val panelLoadingStrategy: PanelLoadingStrategy?

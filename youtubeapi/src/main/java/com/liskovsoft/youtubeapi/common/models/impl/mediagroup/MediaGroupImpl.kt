@@ -1,5 +1,6 @@
 package com.liskovsoft.youtubeapi.common.models.impl.mediagroup
 
+import com.liskovsoft.mediaserviceinterfaces.data.ChannelHeader
 import com.liskovsoft.mediaserviceinterfaces.data.MediaGroup
 import com.liskovsoft.mediaserviceinterfaces.data.MediaItem
 import com.liskovsoft.youtubeapi.browse.v2.gen.*
@@ -241,6 +242,21 @@ internal data class EmptyMediaGroup(
     override fun getItemWrappersInt(): List<ItemWrapper?>? = null
     override fun getNextPageKeyInt(): String = reloadPageKey
     override fun getTitleInt(): String? = title
+}
+
+/**
+ * NEWTUBE(channel-about): carries the channel author's About block in front of the channel page's
+ * sections. Never empty (an empty group would be treated as a lazily-loaded tab and dropped).
+ */
+internal data class ChannelHeaderMediaGroup(
+    private val channelHeader: ChannelHeader?,
+    private val options: MediaGroupOptions
+): BaseMediaGroup(options) {
+    override fun getItemWrappersInt(): List<ItemWrapper?>? = null
+    override fun getNextPageKeyInt(): String? = null
+    override fun getTitleInt(): String? = channelHeader?.title
+    override fun isEmpty(): Boolean = false
+    override fun getChannelHeader(): ChannelHeader? = channelHeader
 }
 
 internal data class MergedMediaGroup(

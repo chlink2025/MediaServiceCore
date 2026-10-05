@@ -14,6 +14,7 @@ import com.liskovsoft.youtubeapi.next.v2.gen.EngagementPanel
 internal data class BrowseResult(
     val contents: Contents?,
     val header: Header?,
+    val metadata: WebMetadata?, // NEWTUBE(channel-about): channelMetadataRenderer (WEB fallback)
     val onResponseReceivedActions: List<OnResponseReceivedAction?>?
 ) {
     data class Contents(
@@ -26,7 +27,8 @@ internal data class BrowseResult(
     }
     data class Header(
         val playlistHeaderRenderer: PlaylistItem?,
-        val musicHeaderRenderer: PlaylistItem?
+        val musicHeaderRenderer: PlaylistItem?,
+        val pageHeaderRenderer: PageHeaderRenderer? // NEWTUBE(channel-about): WEB channel header
     )
 }
 
@@ -140,7 +142,8 @@ internal data class ReelContinuationResult(
 }
 
 internal data class BrowseResultTV(
-    val contents: Contents?
+    val contents: Contents?,
+    val header: PageHeaderWrapper? // NEWTUBE(channel-about): params-shaped channel header
 ) {
     data class Contents(
         val tvBrowseRenderer: TvBrowseRenderer?

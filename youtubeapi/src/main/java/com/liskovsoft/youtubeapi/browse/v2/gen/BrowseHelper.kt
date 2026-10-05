@@ -1,9 +1,15 @@
 package com.liskovsoft.youtubeapi.browse.v2.gen
 
+import com.liskovsoft.mediaserviceinterfaces.data.ChannelHeader
 import com.liskovsoft.sharedutils.helpers.Helpers
 import com.liskovsoft.googlecommon.common.helpers.YouTubeHelper
+import com.liskovsoft.youtubeapi.common.models.gen.AboutChannelViewModel
+import com.liskovsoft.youtubeapi.common.models.gen.ChannelExternalLinkViewModel
 import com.liskovsoft.youtubeapi.common.models.gen.CommandExecutorCommand
 import com.liskovsoft.youtubeapi.common.models.gen.ItemWrapper
+import com.liskovsoft.youtubeapi.common.models.gen.NavigationEndpointItem
+import com.liskovsoft.youtubeapi.common.models.gen.RendererContext
+import com.liskovsoft.youtubeapi.common.models.gen.ShowEngagementPanelEndpoint
 import com.liskovsoft.youtubeapi.common.models.gen.ShowSheetCommand
 import com.liskovsoft.youtubeapi.common.models.gen.ThumbnailItem
 import com.liskovsoft.youtubeapi.common.models.gen.getBrowseId
@@ -11,11 +17,15 @@ import com.liskovsoft.youtubeapi.common.models.gen.getContinuationToken
 import com.liskovsoft.youtubeapi.common.models.gen.getFeedbackToken
 import com.liskovsoft.youtubeapi.common.models.gen.getParams
 import com.liskovsoft.youtubeapi.common.models.gen.getFeedbackTokens
+import com.liskovsoft.youtubeapi.common.models.gen.getHighResThumbnailUrl
 import com.liskovsoft.youtubeapi.common.models.gen.getItems
 import com.liskovsoft.youtubeapi.common.models.gen.getSubtitle
 import com.liskovsoft.youtubeapi.common.models.gen.getSuggestToken
 import com.liskovsoft.youtubeapi.common.models.gen.getText
 import com.liskovsoft.youtubeapi.common.models.gen.getTitle
+import com.liskovsoft.youtubeapi.common.models.impl.ChannelHeaderImpl
+import com.liskovsoft.youtubeapi.common.models.impl.InfoRowImpl
+import com.liskovsoft.youtubeapi.common.models.impl.LinkImpl
 import com.liskovsoft.youtubeapi.common.models.gen.isLive
 import com.liskovsoft.youtubeapi.common.models.gen.isUpcoming
 import com.liskovsoft.youtubeapi.next.v2.gen.EngagementPanel
@@ -342,3 +352,151 @@ internal fun ShowSheetCommand.getFeedbackTokens() = panelLoadingStrategy
 
 internal fun CommandExecutorCommand.getContinuationToken() = commands?.firstNotNullOfOrNull { it?.continuationCommand?.token }
 internal fun CommandExecutorCommand.getFeedbackToken() = commands?.firstNotNullOfOrNull { it?.feedbackEndpoint?.feedbackToken }
+
+////////// channel about //////////
+
+private val TRUNCATION_SUFFIXES = listOf(" ...more", "...more", " …more", "…more")
+private const val SUBTITLE_SEPARATOR = "\u2022" // •
+private const val ICON_COUNTRY = "PRIVACY_PUBLIC"
+private const val ICON_JOINED = "INFO_OUTLINE"
+private const val ICON_SUBSCRIBERS = "PERSON_RADAR"
+private const val ICON_VIDEOS = "MY_VIDEOS"
+private const val ICON_VIEWS = "TRENDING_UP"
+
+internal fun BrowseResultTV.getChannelHeader(channelId: String? = null): ChannelHeader? =
+    getChannelHeaderRenderer()?.toChannelHeader(channelId)
+        ?: header?.pageHeaderRenderer?.content?.pageHeaderViewModel?.toChannelHeader(channelId)
+
+internal fun BrowseResult.getChannelHeader(channelId: String? = null): ChannelHeader? =
+    header?.pageHeaderRenderer?.content?.pageHeaderViewModel?.toChannelHeader(channelId)
+        ?: metadata?.channelMetadataRenderer?.toChannelHeader(channelId)
+
+internal fun BrowseResult.getAboutPanelToken(): String? =
+    header?.pageHeaderRenderer?.content?.pageHeaderViewModel?.description
+        ?.descriptionPreviewViewModel?.rendererContext?.getAboutPanelToken()
+
+internal fun AboutChannelResult.getChannelHeader(channelId: String? = null): ChannelHeader? {
+    val viewModel = onResponseReceivedEndpoints?.firstNotNullOfOrNull { endpoint ->
+        (endpoint?.appendContinuationItemsAction ?: endpoint?.reloadContinuationItemsCommand)
+            ?.continuationItems
+    }?.firstNotNullOfOrNull { it?.aboutChannelRenderer?.metadata?.aboutChannelViewModel }
+
+    return viewModel?.toChannelHeader(channelId)
+}
+
+private fun BrowseResultTV.getChannelHeaderRenderer(): ChannelHeaderRenderer? =
+    contents?.tvBrowseRenderer?.content?.tvSurfaceContentRenderer?.header?.channelHeaderRenderer
+
+private fun RendererContext.getAboutPanelToken(): String? =
+    commandContext?.onTap?.innertubeCommand?.showEngagementPanelEndpoint?.getAboutPanelToken()
+
+internal fun ShowEngagementPanelEndpoint.getAboutPanelToken(): String? =
+    engagementPanel?.engagementPanelSectionListRenderer?.content
+        ?.sectionListRenderer?.contents?.firstNotNullOfOrNull { section ->
+            section?.itemSectionRenderer?.contents?.firstNotNullOfOrNull { shelf ->
+                shelf?.continuationItemRenderer?.getContinuationToken()
+            }
+        }
+
+private fun ChannelHeaderRenderer.toChannelHeader(channelId: String?): ChannelHeader {
+    val about = selectableDescription?.selectableTextRenderer?.onSelectCommand
+        ?.showEngagementPanelEndpoint?.engagementPanel?.engagementPanelSectionListRenderer
+        ?.content?.aboutChannelViewModel
+    val subtitleParts = subtitle?.lineRenderer?.items
+        ?.mapNotNull { it?.lineItemRenderer?.text?.getText() }
+        ?.flatMap { it.split(SUBTITLE_SEPARATOR) }
+        ?.map { it.trim() }
+        ?.filter { it.isNotEmpty() }
+        ?: emptyList()
+
+    return ChannelHeaderImpl(
+        channelId = about?.channelId ?: channelId,
+        title = title?.getText(),
+        handle = subtitleParts.firstOrNull { it.startsWith("@") },
+        subscriberCount = subtitleParts.firstOrNull { it.contains("subscriber", true) },
+        videoCount = subtitleParts.firstOrNull { it.contains("video", true) },
+        description = about?.description
+            ?: selectableDescription?.selectableTextRenderer?.compactDescription?.getText()?.stripTruncation(),
+        artistBio = about?.artistBio?.getText(),
+        avatarUrl = avatar?.getHighResThumbnailUrl(),
+        bannerUrl = backgroundImage?.getHighResThumbnailUrl(),
+        infoRows = about?.toInfoRows()
+    )
+}
+
+private fun PageHeaderViewModel.toChannelHeader(channelId: String?): ChannelHeader {
+    val metadataParts = metadata?.contentMetadataViewModel?.metadataRows
+        ?.flatMap { row -> row?.metadataParts?.mapNotNull { part -> part?.text?.getText() } ?: emptyList() }
+        ?.flatMap { it.split(SUBTITLE_SEPARATOR) }
+        ?.map { it.trim() }
+        ?.filter { it.isNotEmpty() }
+        ?: emptyList()
+
+    return ChannelHeaderImpl(
+        channelId = channelId,
+        title = title?.text?.getText(),
+        handle = metadataParts.firstOrNull { it.startsWith("@") },
+        subscriberCount = metadataParts.firstOrNull { it.contains("subscriber", true) },
+        videoCount = metadataParts.firstOrNull { it.contains("video", true) },
+        description = description?.descriptionPreviewViewModel?.description?.getText()?.stripTruncation(),
+        avatarUrl = image?.decoratedAvatarViewModel?.avatar?.avatarViewModel?.image?.getHighResThumbnailUrl(),
+        bannerUrl = banner?.getHighResThumbnailUrl()
+    )
+}
+
+private fun ChannelMetadataRenderer.toChannelHeader(channelId: String?): ChannelHeader =
+    ChannelHeaderImpl(
+        channelId = channelId,
+        title = title,
+        handle = vanityChannelUrl?.substringAfter("/@", "")?.takeIf { it.isNotEmpty() }?.let { "@$it" },
+        description = description,
+        avatarUrl = avatar?.getHighResThumbnailUrl()
+    )
+
+private fun AboutChannelViewModel.toChannelHeader(channelId: String?): ChannelHeader =
+    ChannelHeaderImpl(
+        channelId = this.channelId ?: channelId,
+        subscriberCount = subscriberCountText,
+        videoCount = videoCountText,
+        description = description,
+        artistBio = artistBio?.getText(),
+        infoRows = toInfoRows(),
+        links = links?.mapNotNull { it?.channelExternalLinkViewModel?.toLink() }
+    )
+
+private fun AboutChannelViewModel.toInfoRows(): List<ChannelHeader.InfoRow>? {
+    if (!infoRows.isNullOrEmpty()) {
+        return infoRows.filterNotNull().map { InfoRowImpl(it.label, it.icon?.iconType) }
+    }
+
+    val rows = mutableListOf<ChannelHeader.InfoRow>()
+
+    country?.let { rows.add(InfoRowImpl(it, ICON_COUNTRY)) }
+    joinedDateText?.getText()?.let { rows.add(InfoRowImpl(it, ICON_JOINED)) }
+    subscriberCountText?.let { rows.add(InfoRowImpl(it, ICON_SUBSCRIBERS)) }
+    videoCountText?.let { rows.add(InfoRowImpl(it, ICON_VIDEOS)) }
+    viewCountText?.let { rows.add(InfoRowImpl(it, ICON_VIEWS)) }
+
+    return rows.ifEmpty { null }
+}
+
+private fun ChannelExternalLinkViewModel.toLink(): ChannelHeader.Link? {
+    val linkText = link ?: return null
+    val url = linkText.commandRuns?.firstNotNullOfOrNull { it?.onTap?.innertubeCommand?.urlEndpoint?.url }
+        ?: linkText.content?.let { if (it.startsWith("http")) it else "https://$it" }
+        ?: return null
+
+    return LinkImpl(
+        title = title?.getText() ?: linkText.content,
+        url = url,
+        faviconUrl = favicon?.getHighResThumbnailUrl()
+    )
+}
+
+private fun String.stripTruncation(): String {
+    var result = this
+
+    TRUNCATION_SUFFIXES.forEach { result = result.removeSuffix(it) }
+
+    return result.trim()
+}

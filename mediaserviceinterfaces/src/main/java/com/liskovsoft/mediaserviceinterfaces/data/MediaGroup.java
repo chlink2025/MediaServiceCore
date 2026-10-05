@@ -40,4 +40,13 @@ public interface MediaGroup {
     String getNextPageKey();
     String getChannelUrl();
     boolean isEmpty();
+
+    /**
+     * NEWTUBE(channel-about): carries the channel author's About block on the channel page's
+     * header group. Null for every other group.
+     */
+    @Nullable
+    default ChannelHeader getChannelHeader() {
+        return null;
+    }
 }

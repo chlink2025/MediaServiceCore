@@ -1,5 +1,6 @@
 package com.liskovsoft.mediaserviceinterfaces;
 
+import com.liskovsoft.mediaserviceinterfaces.data.ChannelHeader;
 import com.liskovsoft.mediaserviceinterfaces.data.MediaGroup;
 import com.liskovsoft.mediaserviceinterfaces.data.MediaItem;
 import io.reactivex.rxjava3.core.Observable;
@@ -57,6 +58,11 @@ public interface ContentService {
     Observable<List<MediaGroup>> getGamingObserve();
     Observable<List<MediaGroup>> getChannelObserve(String channelId);
     Observable<List<MediaGroup>> getChannelObserve(MediaItem item);
+    /**
+     * NEWTUBE(channel-about): full About panel (description, stats, links, artist bio) - lazily
+     * loaded when the user opens the channel page's About sheet.
+     */
+    Observable<ChannelHeader> getChannelAboutObserve(String channelId);
     Observable<List<MediaGroup>> getChannelSortingOptionsObserve(String channelId);
     Observable<List<MediaGroup>> getChannelSortingOptionsObserve(MediaItem item);
     Observable<MediaGroup> getChannelSearchObserve(String channelId, String query);
