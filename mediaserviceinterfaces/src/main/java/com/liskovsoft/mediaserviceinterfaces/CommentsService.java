@@ -19,5 +19,12 @@ public interface CommentsService {
     Observable<Void> deleteCommentObserve(String videoId, String commentId);
 
     /** NEWTUBE(comment-translate): translates one comment's text; emits the translated text. */
-    Observable<String> translateCommentObserve(String commentText, String targetLanguage);
+    Observable<String> translateCommentObserve(String commentText, String targetLanguage, String commentId);
+
+    /** NEWTUBE(comment-translate): YouTube had no translation for the comment (nothing to do). */
+    final class NoTranslationException extends IllegalStateException {
+        public NoTranslationException() {
+            super("No translated text");
+        }
+    }
 }

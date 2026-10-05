@@ -1,5 +1,6 @@
 package com.liskovsoft.youtubeapi.comments
 
+import com.liskovsoft.mediaserviceinterfaces.CommentsService
 import com.liskovsoft.mediaserviceinterfaces.data.CommentGroup
 import com.liskovsoft.mediaserviceinterfaces.data.CommentItem
 import com.liskovsoft.youtubeapi.comments.gen.getDislikeParams
@@ -44,12 +45,13 @@ internal object CommentsServiceInt {
         commentId)
 
     // NEWTUBE(comment-translate): translation is read-only and works signed out, so no
-    // checkSignedIn; throws with YouTube's reason (or "No translated text") when there is no text.
+    // checkSignedIn; a comment YouTube has no translation for throws NoTranslationException.
 
-    fun translateComment(commentText: String, targetLanguage: String): String =
+    fun translateComment(commentText: String, targetLanguage: String, commentId: String): String =
         CommentTranslateAnswers.translatedText(RetrofitHelper.getWithErrors(
-            mApi.commentActionWithAnswer(CommentsApiParams.getTranslateCommentQuery(commentText, targetLanguage))))
-            ?: throw IllegalStateException("No translated text")
+            mApi.commentActionWithAnswer(CommentsApiParams.getTranslateCommentQuery(commentText, targetLanguage))),
+            commentId)
+            ?: throw CommentsService.NoTranslationException()
 
     private fun getCommentsResult(commentsKey: String) = RetrofitHelper.get(mApi.getComments(CommentsApiParams.getCommentsQuery(commentsKey)))
 

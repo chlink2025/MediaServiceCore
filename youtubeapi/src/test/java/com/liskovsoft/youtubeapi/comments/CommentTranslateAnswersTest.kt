@@ -37,6 +37,41 @@ class CommentTranslateAnswersTest {
     }
 
     @Test
+    fun findsTheTranslationInALaterMutation() {
+        // The translation is not guaranteed to be the first mutation: keep walking.
+        val answer = inline("""
+            {"frameworkUpdates":{"entityBatchUpdate":{"mutations":[
+              {"payload":{"commentEntityPayload":{"key":"mine"}}},
+              {"payload":{"commentEntityPayload":{"key":"mine","translatedContent":{"content":"found"}}}}
+            ]}}}
+        """)
+        assertEquals("found", CommentTranslateAnswers.translatedText(answer, "mine"))
+    }
+
+    @Test
+    fun anEmptyTranslationIsNotOne() {
+        val answer = inline("""
+            {"frameworkUpdates":{"entityBatchUpdate":{"mutations":[
+              {"payload":{"commentEntityPayload":{"translatedContent":{"content":"   "}}}}
+            ]}}}
+        """)
+        assertNull(CommentTranslateAnswers.translatedText(answer))
+    }
+
+    @Test
+    fun aRealTranslationWinsOverAFailedAction() {
+        // The content is what the person asked for; the action's status is only read when there is
+        // no translation at all.
+        val answer = inline("""
+            {"actionResult":{"status":"STATUS_FAILED","feedbackText":{"runs":[{"text":"nope"}]}},
+             "frameworkUpdates":{"entityBatchUpdate":{"mutations":[
+               {"payload":{"commentEntityPayload":{"translatedContent":{"content":"hello"}}}}
+             ]}}}
+        """)
+        assertEquals("hello", CommentTranslateAnswers.translatedText(answer))
+    }
+
+    @Test
     fun noTranslationIsNotAFailure() {
         assertNull(CommentTranslateAnswers.translatedText(inline("""{"frameworkUpdates":{}}""")))
         assertNull(CommentTranslateAnswers.translatedText(inline("""{"actionResult":{"status":"STATUS_SUCCEEDED"}}""")))

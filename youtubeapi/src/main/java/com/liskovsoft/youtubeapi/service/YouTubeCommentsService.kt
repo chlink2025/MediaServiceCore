@@ -54,9 +54,10 @@ internal object YouTubeCommentsService: CommentsService {
         }
     }
 
-    override fun translateCommentObserve(commentText: String?, targetLanguage: String?): Observable<String> {
+    override fun translateCommentObserve(commentText: String?, targetLanguage: String?, commentId: String?): Observable<String> {
         return RxHelper.fromCallable {
-            CommentsServiceInt.translateComment(requireNotNull(commentText), requireNotNull(targetLanguage))
+            CommentsServiceInt.translateComment(
+                requireNotNull(commentText), requireNotNull(targetLanguage), requireNotNull(commentId))
         }
     }
 

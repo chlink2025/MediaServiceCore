@@ -8,10 +8,11 @@ import com.google.gson.JsonObject
  * NEWTUBE(comment-translate): what YouTube answered to the translate action
  * (perform_comment_action type 22). The translated text arrives in an entity update:
  * frameworkUpdates.entityBatchUpdate.mutations[].payload.commentEntityPayload.translatedContent.
- * The answer is walked loosely - the first commentEntityPayload that carries a translatedContent,
- * matching commentId preferred - because YouTube nests it differently per client. A refusal is
- * thrown as "ErrorResponse: <YouTube's words>", the form RetrofitHelper gives an HTTP error's
- * message, so a caller finds the reason one way.
+ * The answer is walked loosely - every commentEntityPayload is checked, the one matching the
+ * comment id first - because the translation is not always in the first mutation. Only when no
+ * translation exists is a failed actionResult read as the reason ("ErrorResponse: <YouTube's
+ * words>", the form RetrofitHelper gives an HTTP error's message); no translation and no failure
+ * means YouTube simply had nothing to translate.
  */
 internal object CommentTranslateAnswers {
     private const val SUCCEEDED = "STATUS_SUCCEEDED"
@@ -22,12 +23,23 @@ internal object CommentTranslateAnswers {
      */
     fun translatedText(answer: JsonObject?, commentId: String? = null): String? {
         answer ?: throw IllegalStateException("No answer")
-        checkRefusal(answer)
         val payloads = ArrayList<JsonObject>()
         collectCommentEntityPayloads(answer, payloads)
-        val payload = payloads.firstOrNull { commentId != null && commentId == keyOf(it) }
-            ?: payloads.firstOrNull()
-        return payload?.get("translatedContent")?.let { contentOf(it) }
+        val ordered = if (commentId != null) {
+            payloads.sortedByDescending { commentId == keyOf(it) }
+        } else {
+            payloads
+        }
+        for (payload in ordered) {
+            // Keep looking: the translation may sit in a later mutation, and an empty string is
+            // not a translation.
+            val text = payload.get("translatedContent")?.let { contentOf(it) }?.takeIf { it.isNotBlank() }
+            if (text != null) {
+                return text
+            }
+        }
+        checkRefusal(answer)
+        return null
     }
 
     /** A failed actionResult throws with YouTube's reason; no result at all is not a refusal. */
