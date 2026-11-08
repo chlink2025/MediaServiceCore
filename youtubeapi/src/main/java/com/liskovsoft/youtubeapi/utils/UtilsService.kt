@@ -1,9 +1,12 @@
 package com.liskovsoft.youtubeapi.utils
 
 import com.liskovsoft.googlecommon.common.helpers.RetrofitHelper
+import java.util.concurrent.ConcurrentHashMap
 
 internal object UtilsService {
     private val mUtilsApi = RetrofitHelper.create(UtilsApi::class.java)
+    /** NEWTUBE(comment-authors): a handle resolves to the same UC id for the whole process. */
+    private val sCanonicalIds = ConcurrentHashMap<String, String>()
 
     /**
      * "@name" comes from an @handle link (youtube.com/@MrBeast2) and from the legacy
@@ -15,6 +18,8 @@ internal object UtilsService {
     fun canonicalChannelId(channelId: String?): String? {
         if (channelId == null || !channelId.startsWith("@")) return channelId
 
+        sCanonicalIds[channelId]?.let { return it }
+
         val name = channelId.substring(1)
 
         for (path in listOf(channelId, name, "c/$name", "user/$name")) {
@@ -23,7 +28,10 @@ internal object UtilsService {
             } catch (e: Exception) {
                 null
             }
-            if (resolved != null) return resolved
+            if (resolved != null) {
+                sCanonicalIds[channelId] = resolved
+                return resolved
+            }
         }
 
         return null

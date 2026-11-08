@@ -440,7 +440,10 @@ class YouTubeContentService implements ContentService {
         return RxHelper.fromCallable(() -> {
             checkSigned();
 
-            return getBrowseService2().getChannelAbout(channelId);
+            // NEWTUBE(comment-authors): a channel opened from a comment carries an @handle, not a
+            // UC id. Resolve it here too, or the About sheet asks YouTube for a channel it cannot
+            // find even though the channel page itself loaded fine.
+            return getBrowseService2().getChannelAbout(UtilsService.canonicalChannelId(channelId));
         });
     }
 
@@ -448,7 +451,7 @@ class YouTubeContentService implements ContentService {
     private List<MediaGroup> getChannelSortingOptions(String channelId) {
         checkSigned();
 
-        return getBrowseService2().getChannelSortingOptions(channelId);
+        return getBrowseService2().getChannelSortingOptions(UtilsService.canonicalChannelId(channelId));
     }
 
     @Override
@@ -465,7 +468,7 @@ class YouTubeContentService implements ContentService {
     public MediaGroup getChannelSearch(String channelId, String query) {
         checkSigned();
 
-        return getBrowseService2().getChannelSearch(channelId, query);
+        return getBrowseService2().getChannelSearch(UtilsService.canonicalChannelId(channelId), query);
     }
 
     @Override
