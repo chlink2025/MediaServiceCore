@@ -49,7 +49,8 @@ internal object CommentsServiceInt {
 
     fun translateComment(commentText: String, targetLanguage: String, commentId: String): String =
         CommentTranslateAnswers.translatedText(RetrofitHelper.getWithErrors(
-            mApi.commentActionWithAnswer(CommentsApiParams.getTranslateCommentQuery(commentText, targetLanguage))),
+            mApi.commentActionWithAnswer(
+                CommentsApiParams.getTranslateCommentQuery(commentText, targetLanguage, commentId))),
             commentId)
             ?: throw CommentsService.NoTranslationException()
 
